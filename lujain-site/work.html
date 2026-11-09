@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Work | Lujain Naqaweh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+   
+    .gallery { display: block; column-width: 270px; column-gap: 20px; }
+    .work { display: block; aspect-ratio: auto; margin: 0 0 20px; break-inside: avoid; }
+    .work img, .work video { width: 100%; height: auto; display: block; }
+    
+    .work .label { position: static; margin: 0; border-radius: 0; padding: 11px 16px; font-size: 14px;
+                   background: rgba(255, 255, 255, 0.2); backdrop-filter: none; -webkit-backdrop-filter: none;
+                   border-top: 1px solid var(--glass-border); }
+   
+    #lightbox .box { width: auto; aspect-ratio: auto; max-width: 94vw; max-height: 88vh; display: block; }
+    #lightbox .box > * { position: static; inset: auto; width: auto; height: auto; max-width: 94vw; max-height: 88vh; display: block; object-fit: contain; }
+    #lightbox .box > video { height: min(80vh, 640px); background: #000; }
+  </style>
+</head>
+<body class="opened">
+  <canvas id="bg"></canvas>
+
+  <header class="toolbar">
+    <a class="brand" href="index.html">
+      <div class="logo-slot">LOGO<img src="logo.png" alt="Logo" data-try="logo.png,image.png,Image.png,logo.jpg,image.jpg,logo.jpeg,image.jpeg,logo.webp,image.webp,logo.svg"></div>
+      <span class="brand-name">Lujain Naqaweh</span>
+    </a>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="active" href="work.html">My Work</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <h2 class="title">My Work</h2>
+    <p class="sub">My digital drawings, animations and 3D work. Click any one to view it bigger.</p>
+
+    <div class="filters">
+      <button class="on" data-filter="all">All</button>
+      <button data-filter="drawing">Drawings</button>
+      <button data-filter="animation">Animations</button>
+      <button data-filter="3d">3D</button>
+    </div>
+
+    <div class="gallery">
+      <div class="work" data-type="drawing">
+        <img src="media/game.png">
+        <div class="label"><span>Willow Grove</span><em>Drawing</em></div>
+      </div>
+      <div class="work" data-type="drawing">
+         <img src="media/mermaidcave.png">
+        <div class="label"><span>Mermaid Cave</span><em>Drawing</em></div>
+      </div>
+      <div class="work" data-type="drawing">
+        <img src="media/tiger.jpg">
+        <div class="label"><span>Tiger & Lotus</span><em>Drawing</em></div>
+      </div>
+      <div class="work" data-type="drawing">
+       <img src="media/mountain.jpg">
+        <div class="label"><span>Mountain Meadow</span><em>Drawing</em></div>
+      </div>
+      <div class="work" data-type="drawing">
+         <img src="media/portrait.jpg">
+        <div class="label"><span>Portrait Study</span><em>Drawing</em></div>
+      </div>
+      <div class="work" data-type="drawing">
+       <img src="media/pendant.jpg">
+        <div class="label"><span>Glowing Pendant</span><em>Drawing</em></div>
+      </div>
+      <div class="work" data-type="drawing">
+      <img src="media/redblue.jpg">
+        <div class="label"><span>Red & Blue Stairwell</span><em>Drawing</em></div>
+      </div>
+      <div class="work" data-type="drawing">
+      <img src="media/cityswing.jpg">
+        <div class="label"><span>City Swing</span><em>Drawing</em></div>
+      </div>
+      <div class="work" data-type="drawing">
+         <img src="media/noodles.jpg">
+        <div class="label"><span>Noodle Bite</span><em>Drawing</em></div>
+      </div>
+      <div class="work" data-type="animation">
+  <video src="media/Animatic.mp4" muted playsinline preload="metadata"></video>
+  <div class="label"><span>Ballroom Animatic</span><em>Animatic (unfinished)</em></div>
+</div>
+<div class="work" data-type="animation">
+  <video src="media/chibi.mp4" muted playsinline preload="metadata"></video>
+  <div class="label"><span>Chibi Animation</span><em>Animation</em></div>
+</div>
+<div class="work" data-type="3d">
+  <video src="media/3d.mp4" muted playsinline preload="metadata"></video>
+  <div class="label"><span>Donut &amp; Mug</span><em>3D &middot; Blender</em></div>
+</div>
+    </div>
+  </main>
+
+  <div id="lightbox">
+    <button class="close" aria-label="Close">&#10005;</button>
+    <div class="box"></div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
